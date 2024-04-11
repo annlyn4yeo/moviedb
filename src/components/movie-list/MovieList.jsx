@@ -8,6 +8,7 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import Button from "../button/Button";
 import tmdbApi, { category } from "../../api/tmdbApi";
 import apiConfig from "../../api/apiConfig";
+import { MovieCard } from "../movie-card/MovieCard";
 
 const MovieList = (props) => {
   const [items, setItems] = useState([]);
@@ -34,10 +35,10 @@ const MovieList = (props) => {
 
   return (
     <div className="movie-list">
-      <Swiper grabCursor={true} spaceBetween={10} slidesPerView={'auto'}>
+      <Swiper grabCursor={true} spaceBetween={10} slidesPerView={"auto"}>
         {items.map((item, index) => (
           <SwiperSlide>
-            <img src={apiConfig.w500Image(item.poster_path)} alt=""></img>
+            <MovieCard item={item} category={props.category} />
           </SwiperSlide>
         ))}
       </Swiper>
