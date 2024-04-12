@@ -28,7 +28,7 @@ export default function Header() {
       <div className="header__wrap container">
         <div className="logo">
           <img src={logo} alt="" />
-          <Link to="/">MovieDb</Link>
+          <Link to="/">MyMovies</Link>
         </div>
         <ul className="header__nav">
           {headerNav.map((element, index) => (
