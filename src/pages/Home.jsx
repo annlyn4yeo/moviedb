@@ -13,7 +13,7 @@ export default function Home() {
         <div className="section mb-3">
           <div className="section__header mb-2">
             <h2>Trending Now</h2>
-            <Link to="/movie">
+            <Link to="/movies">
               <OutlineButton className="small">View More</OutlineButton>
             </Link>
           </div>
@@ -23,7 +23,7 @@ export default function Home() {
         <div className="section mb-3">
           <div className="section__header mb-2">
             <h2>Top Rated Movies</h2>
-            <Link to="/movie">
+            <Link to="/movies">
               <OutlineButton className="small">View more</OutlineButton>
             </Link>
           </div>
