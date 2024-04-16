@@ -4,6 +4,7 @@ import tmdbApi from "../../api/tmdbApi";
 import apiConfig from "../../api/apiConfig";
 import "./Details.scss";
 import Castlist from "./Castlist";
+import VideoList from "./VideoList";
 
 export default function Details() {
   const { category, id } = useParams();
@@ -58,6 +59,11 @@ export default function Details() {
                 </div>
                 <Castlist id={item.id} />
               </div>
+            </div>
+          </div>
+          <div className="container">
+            <div className="section mb-3">
+              <VideoList id={item.id} />
             </div>
           </div>
         </>
