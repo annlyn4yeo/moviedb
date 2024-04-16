@@ -41,7 +41,8 @@ const tmdbApi = {
     return axiosClient.get(url, params);
   },
   credits: (cate, id) => {
-    const url = category[cate] + "/" + id + "/credits";
+    if (cate === "movies") cate = "movie";
+    const url = cate + "/" + id + "/credits";
     return axiosClient.get(url, { params: {} });
   },
   similar: (cate, id) => {
