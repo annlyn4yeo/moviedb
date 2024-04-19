@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="footer__content__logo">
           <div className="logo">
             <img src={logo} alt="" />
-            <Link to="/">MovieDb</Link>
+            <Link to="/">MyMovies</Link>
           </div>
         </div>
         <div className="footer__content__menus">
