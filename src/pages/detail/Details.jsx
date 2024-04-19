@@ -5,6 +5,7 @@ import apiConfig from "../../api/apiConfig";
 import "./Details.scss";
 import Castlist from "./Castlist";
 import VideoList from "./VideoList";
+import MovieList from "../../components/movie-list/MovieList";
 
 export default function Details() {
   const { category, id } = useParams();
@@ -65,6 +66,10 @@ export default function Details() {
             <div className="section mb-3">
               <VideoList id={item.id} />
             </div>
+            <div className="section mb-3">
+              <h2>Similar</h2>
+            </div>
+            <MovieList category={category} type="similar" id={item.id} />
           </div>
         </>
       )}
